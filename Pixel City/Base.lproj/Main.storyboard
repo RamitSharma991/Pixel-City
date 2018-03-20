@@ -30,9 +30,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Double-Tap to drop a pin and  view photos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aot-dD-aWt">
-                                        <rect key="frame" x="22.5" y="25" width="330" height="21"/>
+                                        <rect key="frame" x="30" y="25" width="315" height="21"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="330" id="T1z-WS-GwL"/>
                                             <constraint firstAttribute="height" constant="21" id="UIZ-9L-54n"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
@@ -92,6 +91,55 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="141.59999999999999" y="133.5832083958021"/>
+        </scene>
+        <!--PopVC-->
+        <scene sceneID="E7V-ml-gaK">
+            <objects>
+                <viewController storyboardIdentifier="PopVC" id="s9B-Fz-DO5" customClass="PopVC" customModule="Pixel_City" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tQe-Oc-7K0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.84999999999999998" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BQL-gg-jCk">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yb2-tg-ggA">
+                                <rect key="frame" x="87" y="622" width="200" height="25"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Double Tap to dismiss" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4R-FG-oOX">
+                                        <rect key="frame" x="24" y="2" width="152.5" height="21"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="0F1-GE-rzy"/>
+                                    <constraint firstAttribute="width" constant="200" id="TL2-zA-smA"/>
+                                    <constraint firstItem="a4R-FG-oOX" firstAttribute="centerY" secondItem="Yb2-tg-ggA" secondAttribute="centerY" id="oIZ-WP-xgt"/>
+                                    <constraint firstItem="a4R-FG-oOX" firstAttribute="centerX" secondItem="Yb2-tg-ggA" secondAttribute="centerX" id="sl1-Gz-po4"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="BQL-gg-jCk" firstAttribute="leading" secondItem="GdB-RT-Wmk" secondAttribute="leading" id="NfU-y7-IYu"/>
+                            <constraint firstItem="GdB-RT-Wmk" firstAttribute="bottom" secondItem="Yb2-tg-ggA" secondAttribute="bottom" constant="20" id="OkC-jE-wEZ"/>
+                            <constraint firstItem="Yb2-tg-ggA" firstAttribute="centerX" secondItem="tQe-Oc-7K0" secondAttribute="centerX" id="ZAH-DM-buR"/>
+                            <constraint firstItem="BQL-gg-jCk" firstAttribute="trailing" secondItem="GdB-RT-Wmk" secondAttribute="trailing" id="fFr-ag-9TN"/>
+                            <constraint firstItem="BQL-gg-jCk" firstAttribute="top" secondItem="tQe-Oc-7K0" secondAttribute="top" id="wZx-vz-SVA"/>
+                            <constraint firstItem="BQL-gg-jCk" firstAttribute="bottom" secondItem="GdB-RT-Wmk" secondAttribute="bottom" id="zEq-u3-Whn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GdB-RT-Wmk"/>
+                    </view>
+                    <connections>
+                        <outlet property="popImageView" destination="BQL-gg-jCk" id="NYh-Zn-Kwk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mIm-OY-8AW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="789.60000000000002" y="130.88455772113943"/>
         </scene>
     </scenes>
     <resources>

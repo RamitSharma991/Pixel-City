@@ -8,4 +8,6 @@ target 'Pixel City' do
   # Pods for Pixel City
   pod 'Alamofire'
   pod 'AlamofireImage'
+  pod 'SwiftyJSON'
+
 end

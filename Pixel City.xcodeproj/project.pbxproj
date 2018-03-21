@@ -48,6 +48,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3122EB4320624677008C75C1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3122EB442062467F008C75C1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Services;
+			path = "New Group/Services";
+			sourceTree = "<group>";
+		};
+		3122EB4520624683008C75C1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		314F456920287CB2001BF77F = {
 			isa = PBXGroup;
 			children = (
@@ -69,9 +91,10 @@
 		314F457420287CB2001BF77F /* Pixel City */ = {
 			isa = PBXGroup;
 			children = (
+				3122EB4320624677008C75C1 /* Extensions */,
+				3122EB442062467F008C75C1 /* Services */,
 				314F458B20287DD5001BF77F /* Utilities */,
-				314F458A20287DC6001BF77F /* Extensions */,
-				314F458820287DB2001BF77F /* Model */,
+				3122EB4520624683008C75C1 /* Model */,
 				314F458920287DBD001BF77F /* View */,
 				314F458720287D9E001BF77F /* Controller */,
 				314F457520287CB2001BF77F /* AppDelegate.swift */,
@@ -92,13 +115,6 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		314F458820287DB2001BF77F /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		314F458920287DBD001BF77F /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -106,13 +122,6 @@
 				315946842033037A00BBD079 /* PhotoCell.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		314F458A20287DC6001BF77F /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		314F458B20287DD5001BF77F /* Utilities */ = {
@@ -235,11 +244,13 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Pixel City/Pods-Pixel City-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

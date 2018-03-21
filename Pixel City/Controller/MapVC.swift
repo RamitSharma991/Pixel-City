@@ -39,11 +39,13 @@ class MapVC: UIViewController, UIGestureRecognizerDelegate {
         configureLocationServices()
         addDoubleTap()
         
+        
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: flowLayout)
         collectionView?.register(PhotoCell.self, forCellWithReuseIdentifier: "photoCell")
         collectionView?.dataSource = self
         collectionView?.delegate = self
         collectionView?.backgroundColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
+        registerForPreviewing(with: self, sourceView: collectionView!)
         
         pullUpView.addSubview(collectionView!)
     }
@@ -127,7 +129,7 @@ extension MapVC: MKMapViewDelegate{
         }
         
         let pinAnnotation = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "droppablePin")
-        pinAnnotation.pinTintColor = #colorLiteral(red: 0.9771530032, green: 0.7062081099, blue: 0.1748393774, alpha: 1)
+        pinAnnotation.pinTintColor = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
         pinAnnotation.animatesDrop = true
         return pinAnnotation
     }
@@ -263,6 +265,22 @@ extension MapVC: UICollectionViewDelegate, UICollectionViewDataSource {
     }
 }
 
+extension MapVC: UIViewControllerPreviewingDelegate {
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
+        guard let indexPath = collectionView?.indexPathForItem(at: location), let cell = collectionView?.cellForItem(at: indexPath) else {return nil}
+        guard let popVC = storyboard?.instantiateViewController(withIdentifier: "PopVC") as? PopVC else {return nil}
+        
+        popVC.initData(forImage: imageArray[indexPath.row])
+        previewingContext.sourceRect = cell.contentView.frame
+        return popVC
+    }
+    
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
+        show(viewControllerToCommit, sender: self)
+    }
+    
+    
+}
 
 
 
